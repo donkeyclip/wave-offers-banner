@@ -1,10 +1,8 @@
 * {
-  --font-size: {{ initParams.fontSize }};
-  --font-color: {{ initParams.color }};
-  /*
-    This is an example of how to use MotorCortex's init params in css, using a css variable
-      if you are unfamiliar with css variables here is a quick guide https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#basic_usage
-  */
+  --bg-linear-color-1: {{ initParams.backgroundLinearColor1 }};
+  --bg-linear-color-2: {{ initParams.backgroundLinearColor2 }};
+  --font-color: {{ initParams.fontColor}};
+
 }
 
 .container {
@@ -13,8 +11,8 @@ justify-content: center;
 flex-direction: column;
 align-items: center;
 height: 100%;
-color: white;
-background: linear-gradient(100.26deg, #6AC0FF 2.31%, #0073FA 100%);
+color: var(--font-color);
+background: linear-gradient(100.26deg, var(--bg-linear-color-1) 2.31%, var(--bg-linear-color-2) 100%);
 }
 
 .wave{
@@ -26,7 +24,7 @@ background: linear-gradient(100.26deg, #6AC0FF 2.31%, #0073FA 100%);
 
 .wave1{
   height: 70px;
-  background: url(assets/wave2.png);
+  background: url({{initParams.wave1}});
   background-size:470px 70px;
   animation: animate 20s linear infinite;
 
@@ -36,7 +34,7 @@ background: linear-gradient(100.26deg, #6AC0FF 2.31%, #0073FA 100%);
 }
 .wave2{
   height: 75px;
-  background: url(assets/w2.png);
+  background: url({{initParams.wave2}});
   background-size:470px 75px;
   animation: animate2 15s linear infinite;
 
@@ -45,8 +43,8 @@ background: linear-gradient(100.26deg, #6AC0FF 2.31%, #0073FA 100%);
 }
 .wave3{
   height: 75px;
-  background: url(assets/w3.png);
-  background-size:470px 75px;
+  background: url({{initParams.wave3}});
+  background-size:470px 75px; 
   animation: animate3 8s linear infinite;
   animation-delay: -2s;
   bottom: 0px;
@@ -56,7 +54,7 @@ background: linear-gradient(100.26deg, #6AC0FF 2.31%, #0073FA 100%);
   position: absolute;
   width: 200px;
   height: 200px;
-  background: white;
+  background: var(--font-color);
   border-radius: 100%;
 
 }
@@ -83,10 +81,11 @@ font-style: normal;
 font-weight: 900;
 font-size: 25px;
 line-height: 30px;
--webkit-text-stroke: 0.5px white;
+-webkit-text-stroke: 0.5px var(--font-color);
 -webkit-text-fill-color: transparent;
 animation: offer 8s linear infinite;  
 text-align: center;
+text-transform: uppercase;
 
 }
 
@@ -143,7 +142,7 @@ text-align: center;
   height: 170px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("assets/black1.png");
+  background-image: url({{initParams.image}});
   animation: image 4s linear infinite;
 }
 

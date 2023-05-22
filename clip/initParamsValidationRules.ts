@@ -1,15 +1,11 @@
 export default {
-  color: {
-    label: "Text Color",
-    type: "color",
-    optional: true,
-    default: "white",
-  },
-  fontSize: {
-    label: "Font size",
-    type: "measurement",
-    units: ["px"],
-    optional: true,
-    default: "12px",
-  },
+  backgroundLinearColor1:{ type: "color" },
+  backgroundLinearColor2:{ type: "color" },
+  fontColor:{ type: "color" },
+  wave1:{ type: "string" },
+  wave2:{ type: "string" },
+  wave3:{ type: "string" },
+  text:{ type: "string" },
+  offer:{ type: "string" },
+  image:{ type: "string" }
 };
