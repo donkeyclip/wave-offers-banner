@@ -7,5 +7,14 @@ export default {
   wave3:{ type: "string" },
   text:{ type: "string" },
   offer:{ type: "string" },
-  image:{ type: "string" }
+  products: {
+    label: "Products",
+    type: "array",
+    items: {
+      type: "object",
+      props: {
+        image:{ type: "string" }
+      }
+    }
+  }
 };
