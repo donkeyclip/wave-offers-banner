@@ -2,10 +2,10 @@ import { HTMLClip } from "@donkeyclip/motorcortex";
 import css from "./clip.css";
 import html from "./clip.html";
 import { fadeOut } from "./effects/fadeOut";
-import { scaleBig } from "./effects/scaleBig";
+import { top } from "./effects/scaleBig";
 import initParams from "./initParams";
 import initParamsValidationRules from "./initParamsValidationRules";
-
+import { itemsCombo } from "./effects/itemsCombo";
 import { loadPlugin } from "@donkeyclip/motorcortex";
 import BackgroundsDefinition from "@donkeyclip/motorcortex-backgrounds";
 const Plugin = loadPlugin(BackgroundsDefinition);
@@ -27,6 +27,6 @@ const clip = new HTMLClip({
   ],
 });
 
-
+clip.addIncident(itemsCombo(".image"),0)
 
 export { clip };

@@ -140,8 +140,9 @@ text-transform: uppercase;
   position: absolute;
   width: 170px;
   height: 170px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-image: url({{initParams.image}});
   animation: image 4s linear infinite;
 }
